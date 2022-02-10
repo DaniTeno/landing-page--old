@@ -1,12 +1,13 @@
-export function homeListeners(){
+export function homeLogic(){
      const d = document,
+          $home = d.querySelector('.home-screen'),
           $clock = d.createElement('div'),
           jsConcept = 'JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en muchos entornos fuera del navegador, tal como Node.js, Apache CouchDB y Adobe Acrobat JavaScript es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional).',
           cssConcept = 'CSS, en español «Hojas de estilo en cascada», es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.',
           htmlConcept = 'HTML, siglas en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web.',
           pageInfo = 'Esta es mi página de presentación, por ahora solo uso las 3 tecnologías base de la programación web, sin uso de frameworks o librerías externas, pero empleo técnicas de recorrido del DOM y el BOM, así como la consulta a API REST en alguna de las secciones. Siéntete libre de explorar.';
-
-     d.querySelector('main').appendChild($clock);
+     
+     $home.appendChild($clock);
      $clock.classList.add('clock') 
      
      $clock.innerHTML = `
@@ -15,23 +16,28 @@ export function homeListeners(){
      <p id="minute"></p>
      `;
      
+     let $minute = $home.querySelector('#minute'),
+          $hour = $home.querySelector('#hour'),
+          $blink = $home.querySelector('#blink')
+
      setInterval(()=>{
           let date = new Date(),
                hours = date.getHours(),
                minutes = date.getMinutes();
-          d.getElementById('hour').textContent = `${hours}`;
-          d.getElementById('minute').textContent = `${minutes}`;
-          d.getElementById('blink').classList.toggle('blink')
+          $minute.textContent = `${minutes}`;
+          $hour.textContent = `${hours}`;
+          $blink.classList.toggle('blink')
+     console.log($minute.textContent)
 
-          if(date.getHours() < 10) d.getElementById('hour').textContent = `0${date.getHours()}`;
-          if(date.getMinutes()<10) d.getElementById('minute').textContent = `0${date.getMinutes()}`;
+          if(date.getHours() < 10) $hour.textContent = `0${date.getHours()}`;
+          if(date.getMinutes()<10) $minute.textContent = `0${date.getMinutes()}`;
      }, 1000)
 
      d.addEventListener('scroll', e =>{       
           const dElement = document.documentElement,
                scrolled = dElement.scrollTop,
-               $gifBanner = d.querySelector('.head-banner-gif'),
-               $test = d.querySelector('#text');
+               $gifBanner = $home.querySelector('.head-banner-gif'),
+               $test = $home.querySelector('#text');
 
           if(scrolled > dElement.clientHeight*0.3){
                $gifBanner.style.top = `${dElement.clientHeight*0.3}px`;
@@ -68,7 +74,7 @@ export function homeListeners(){
           }
      });
 
-     d.addEventListener('mouseover', e=>{
+     $home.addEventListener('mouseover', e=>{
           const $test = d.querySelector('#text'),
                $js = d.querySelector('#js img'),
                $css = d.querySelector('#css img'),

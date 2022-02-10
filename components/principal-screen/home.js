@@ -1,4 +1,3 @@
-import { homeListeners } from "./home-listeners.js";
 
      
 export function home(){
@@ -33,6 +32,5 @@ export function home(){
           <p id="hi">-Te saluda Daniel Tenorio</p>
      `;
      
-          homeListeners();     
      return $home;
 }

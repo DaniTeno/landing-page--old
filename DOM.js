@@ -4,7 +4,7 @@ import { principalScreen } from "./components/principal-screen/principal-screen.
 const d = document,
      $main = document.querySelector('main')
 
-alert('Este sitio aún está en construcción')
+// alert('Este sitio aún está en construcción')
 
 d.addEventListener('DOMContentLoaded', e=>{
      $main.insertAdjacentElement('beforebegin', lateralBand());
@@ -14,7 +14,7 @@ d.addEventListener('DOMContentLoaded', e=>{
 window.addEventListener('hashchange', e=>{
      let hash = location.hash;
      console.log(hash)
-     location.reload();
+     // location.reload();
      scrollTo(0,0)
      principalScreen();
 })

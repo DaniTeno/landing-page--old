@@ -13,6 +13,10 @@ export function social(){
                     <img src="../../assets/icons8-linkedin-100.png">
                </figure>
 
+               <figure id="github">
+                    <img src="../../assets/icons8-linkedin-100.png">
+               </figure>
+
                <figure id="facebook">
                     <a href="https://www.facebook.com/dterror0011/" target="_blank" rel="noopener">
                          <img src="../../assets/icons8-facebook-90.png">

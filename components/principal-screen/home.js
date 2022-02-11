@@ -30,6 +30,24 @@ export function home(){
           </div>
 
           <p id="hi">-Te saluda Daniel Tenorio</p>
+
+          <section id="about-me">
+          <div class="about">SOBRE MI</div>
+          <div class="personal-info">
+               <img>
+               <div id="basic-info">
+                    <p>Nombre: Daniel</p>
+                    <p>Apellido: Tenorio</p>
+                    <p>Edad: 24 años</p>
+                    <p>Idiomas: Español (materno), Inglés (avanzado)</p>
+                    <p>Nacionalidad: Venezolano</p>
+               </div>
+               <div id="resume">
+                    <p>Resumen:<p>
+                    <p>Me considero una persona curiosa por naturaleza y siempre con ganas de aprender. Me gusta mucho la cocina, la fotografía y los videojuegos, además de la programación. Esta página es mi demostración de lo aprendido en pocos meses de aprendizaje, mi objetivo es profesionalizarme en la programación. Mi enfoque actual es la programación Front-End en JavaScript... Pero no será el único lenguaje en el que me enfoque de cara al futuro<p>
+               </div>
+          </div>
+          </section>
      `;
      
      return $home;

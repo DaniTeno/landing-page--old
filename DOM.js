@@ -14,7 +14,6 @@ d.addEventListener('DOMContentLoaded', e=>{
 window.addEventListener('hashchange', e=>{
      let hash = location.hash;
      console.log(hash)
-     // location.reload();
      scrollTo(0,0)
      principalScreen();
 })

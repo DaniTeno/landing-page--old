@@ -1,4 +1,3 @@
-import { formLogic } from "./form-logic.js";
 
 export function social(){
      const d = document,
@@ -47,17 +46,18 @@ export function social(){
                          </figure>
                          <form class="hidden">
                               <input type="text" name="name" placeholder="*Nombre" required autocomplete="off">
-                              <input type="email" name="email" placeholder="*Email" required autocomplete="off">
+                              <input type="text" name="email" placeholder="Email" autocomplete="off">
                               <input type="text" name="subject" placeholder="Asunto" autocomplete="off">
                               <textarea name="msg-content" cols="60" rows="6" placeholder="*Deja tu mensaje aquí" required></textarea>
-                              <input type="submit" value="Enviar mensaje" id="submit-btn">
+                              <input type="submit" value="Enviar mensaje" id="submit-btn">                       
+                              <div class="loading-modal nodisplay">
+                                   <img src="../../assets/oval.svg" alt="loading-img" id="loader-svg">
+                              </div>
                          </form>
                     </div>                  
                </div>
                <img src="../../assets/social-banner.jpg" class="social-banner-gif">    
      `;
-
-     formLogic();
-
+     
      return $social
 }

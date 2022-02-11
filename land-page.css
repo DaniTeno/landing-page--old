@@ -8,6 +8,7 @@
      font-family: sans-serif;
      resize: none;
      outline: none;
+     scroll-behavior: smooth;
 }
 
 body{
@@ -47,13 +48,18 @@ main{
      opacity: 0;
 }
 
+.nodisplay{
+     display: none;
+}
 
 .title{
      z-index: 99;
+     left: 0;
      top: 0;
      width: 100%;
      position: fixed;
-     text-align: center;
+     text-align: right;
+     padding-right: 1rem;
      font-size: 2rem;
      background-color: rgb(168, 42, 42);
      animation: 1.5s margin-slidein;
@@ -121,14 +127,19 @@ main{
 }
 
 .show{
-     animation: slidein .5s;
+     animation: margin-slidein .5s;
 }
 
 .tech-used {
      display: flex;
-     flex-wrap: wrap;
      justify-content: space-around;
      padding: 2rem 0;
+     width: 100%;
+     position: relative;
+     top: 90vh;
+     font-size: 2rem;
+     z-index: 20;
+     background-color: #0000009f;
 }
 
 .clock{
@@ -164,29 +175,18 @@ main{
      text-align: center;
 }
 
-.tech-used{
-     width: 100%;
-     position: relative;
-     top: 90vh;
-     /* text-align: center; */
-     font-size: 2rem;
-     /* background-color: rgb(168, 42, 42); */
-     z-index: 20;
-     background-color: #0000009f;
-
-}
-
 #text{
      width: 50vw;
-     top: 95vh;
-     position: relative;
+     top: 150vh;
+     position: absolute;
      z-index: 30;
-     /* text-align: center; */
+     left: 32vw;
      margin: auto;
      transition: ease-in;
      padding: 1rem;
      background-color: rgba(59, 0, 52, 0.699);
      border-radius: .5rem;
+     min-width: 300px;
 }
 
 #hi{
@@ -200,6 +200,27 @@ main{
      background-color: rgb(168, 12, 12);
      font-size: 2.5vw;
 }
+
+/* -----------------SOBRE MI--------------------*/
+
+#about-me{
+     position: relative;
+     top: 150vh;
+     z-index: 30;
+     width: 100%;
+}
+
+.about{
+     background-color: #601a66;
+     text-align: center;
+     font-family: 'VT323';
+     font-size: 3rem;
+}
+
+.personal-info{
+     position: relative;
+}
+
 
 /* -----------------SOCIAL--------------------*/
 
@@ -295,13 +316,14 @@ main{
      transition: ease .15s;
      border: 2px solid rgb(240, 86, 86);
      background: linear-gradient(to bottom, rgb(143, 162, 245), rgb(202, 114, 180));
+     box-shadow: 1px 1px 5px #111;
 }
 
 .slidein-from-right{
      animation: slidein-reverse .7s;
 }
 
-form *{
+form > *{
      border-radius: 1rem;
      font-size: 1rem;
      text-align: center;
@@ -356,6 +378,18 @@ form *:focus{
 }
 
 
+.loading-modal{
+     position: absolute;
+     background-color: #29292981;
+     border-radius: 1rem;
+     width: 80px;
+     height: 80px;
+     left: calc(50% - 40px);
+     right: auto;
+     /* margin: auto; */
+     padding: 1rem;
+     border: none;
+}
 
 /* -----------------ANIMACIONES--------------------*/
 

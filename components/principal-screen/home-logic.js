@@ -27,7 +27,6 @@ export function homeLogic(){
           $minute.textContent = `${minutes}`;
           $hour.textContent = `${hours}`;
           $blink.classList.toggle('blink')
-     console.log($minute.textContent)
 
           if(date.getHours() < 10) $hour.textContent = `0${date.getHours()}`;
           if(date.getMinutes()<10) $minute.textContent = `0${date.getMinutes()}`;

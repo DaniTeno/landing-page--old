@@ -15,14 +15,19 @@ export function formLogic(){
           .then(res => res.ok ? res.json() : Promise.reject())
           .then(json => {
                console.log(json);
-               $modalLoading.innerHTML = `<p id="sended-msg">Enviado<p>`;                         
+               (localStorage.getItem('lang').includes('es'))
+                    ? $modalLoading.innerHTML = `<p id="sended-msg">Enviado<p>`                   
+                    : $modalLoading.innerHTML = `<p id="sended-msg">Delivered<p>`;                         
+               
                setTimeout(()=>{
                     $modalLoading.classList.add("nodisplay");
                }, 2000)
           })
           .catch(err =>{
-               console.log(err)
-               $modalLoading.innerHTML = `<p id="sended-msg">Ocurrió un error :(<p>`;
+               console.log(err);
+               (localStorage.getItem('lang').includes('es'))
+                    ? $modalLoading.innerHTML = `<p id="sended-msg">Ocurrió un error :(<p>`
+                    : $modalLoading.innerHTML = `<p id="sended-msg">Something went wrong :(<p>`
                setTimeout(()=>{
                     $modalLoading.classList.add("nodisplay");
                }, 2000);  

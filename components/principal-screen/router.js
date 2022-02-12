@@ -15,9 +15,9 @@ export function router(){
      if(hash == '#about'){
           $main.appendChild(home()) 
           homeLogic(); 
-          scrollTo(0,dElement.clientHeight*2)
+          scrollTo(0,dElement.scrollHeight*0.76-dElement.clientHeight)
           d.addEventListener('click', e=>{
-               if(e.target.matches('#about-lateral-btn')) scrollTo(0,dElement.clientHeight*2)
+               if(e.target.matches('#about-lateral-btn')) scrollTo(0,dElement.scrollHeight*0.76-dElement.clientHeight)
           })
      }
      else if(hash == '#/projects'){

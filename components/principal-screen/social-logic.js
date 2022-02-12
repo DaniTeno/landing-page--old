@@ -5,6 +5,11 @@ export function socialLogic(){
           $gmail = $social.querySelector('#gmail img'),
           $socialName = $social.querySelector('#social-name')
 
+     
+     $social.querySelector('.title').style.background = 'linear-gradient(to bottom, rgb(202, 125, 151), rgb(232, 125, 151))';
+     d.querySelector('.principal-band').style.background = 'linear-gradient(to bottom, rgb(255, 118, 76), rgb(255, 118, 125))';
+
+     
      $social.addEventListener('click', e=>{
           if(e.target == $gmail){
                $form.classList.toggle('hidden')

@@ -56,7 +56,7 @@ export function social(){
                          </form>
                     </div>                  
                </div>
-               <img src="../../assets/social-banner.jpg" class="social-banner-gif">    
+               <img src="../../assets/gif3.gif" class="social-banner-gif">    
      `;
      
      return $social

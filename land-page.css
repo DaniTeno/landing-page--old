@@ -1,14 +1,18 @@
 *{
      box-sizing: border-box;
-     font-size: 1.1rem;
+     font-size: 1.4rem;
      margin: 0;
      padding: 0;
      text-decoration: none;
      color: rgb(255, 255, 255);
-     font-family: sans-serif;
+     font-family: 'VT323', sans-serif;
      resize: none;
      outline: none;
      scroll-behavior: smooth;
+}
+
+.pruebas{
+     background: linear-gradient(to bottom, rgb(255, 118, 76), rgb(175, 107, 253))
 }
 
 body{
@@ -36,20 +40,23 @@ main{
 
 ::-webkit-scrollbar-thumb{
      /* border-radius: 10px; */
-     background-color: #292929;
+     background-color: #690404;
 }
 ::-webkit-scrollbar-thumb:hover{
      background-color: #4a006dd2;
 }
 
+.colors{
+     transition: ease;
+     animation: colors 4s infinite;
+}
 
 .hidden{
-     transition: ease .5s;
      opacity: 0;
 }
 
 .nodisplay{
-     display: none;
+     visibility: hidden;
 }
 
 .title{
@@ -63,8 +70,12 @@ main{
      font-size: 2rem;
      background-color: rgb(168, 42, 42);
      animation: 1.5s margin-slidein;
+     box-shadow: 1px -5px 11px #111;
 }
 
+.slide-from-left{
+     animation: slidein .5s;
+}
 
 /* -----------------LATERAL-BAND--------------------*/
 
@@ -88,7 +99,7 @@ main{
 }
 
 .principal-band a:hover{
-     background-color: rgba(0, 0, 0, 0.137);
+     background-color: rgba(0, 199, 60, 0.452);
 }
 
 #logo{
@@ -124,6 +135,8 @@ main{
 
 .tech-used figure{
      max-height: 200px;
+     transition: ease .3s;
+
 }
 
 .show{
@@ -177,7 +190,7 @@ main{
 
 #text{
      width: 50vw;
-     top: 150vh;
+     top: 142vh;
      position: absolute;
      z-index: 30;
      left: 32vw;
@@ -187,6 +200,7 @@ main{
      background-color: rgba(59, 0, 52, 0.699);
      border-radius: .5rem;
      min-width: 300px;
+     font-size: 1.1rem;
 }
 
 #hi{
@@ -208,31 +222,95 @@ main{
      top: 150vh;
      z-index: 30;
      width: 100%;
+     padding-bottom: 1.7rem;
 }
 
 .about{
+     position: relative;
      background-color: #601a66;
      text-align: center;
      font-family: 'VT323';
-     font-size: 3rem;
+     font-size: 2.3rem;
+     z-index: 30;
 }
 
 .personal-info{
+     display: flex;
+     position: relative;
+     margin: 3rem;
+     z-index: 30;
+}
+
+.personal-info > div{
+     display: flex;
+     margin:  0 2rem;
+     flex-direction: column;
+}
+
+.personal-info img{
+     border: 4px solid rgb(78, 0, 0);
+     border-radius: 3px;
+     max-height: 400px;
+}
+
+#basic-info > div{
+     display: flex;
+     justify-content: space-between;
+     z-index: 20;
+}
+
+#resume,#basic-info > div{
+     background-color: #350028d2;
+     border-radius: 3px;
+     padding: .2rem;
+     margin-bottom: .5rem;
+     border: 2px solid rgba(27, 0, 78, 0.568);
      position: relative;
 }
 
+#basic-info > div > p{
+     padding: 0 .5rem;
+}
+
+#resume{
+     background-color: #17002cd2;
+     transition: ease .3;
+     position: relative;
+     z-index: 10;
+}
+
+#basic-info p, #resume p{
+     font-family: 'VT323';
+     font-size: 1.2rem;
+}
+
+#resume p{
+     margin-bottom: .5rem;
+}
+
+.slidedown{
+     animation: slidedown 1s;
+}
+
+#about-me-backg{
+     width: 100%;
+     position: absolute;
+     top: 10rem;
+     z-index: 5;
+     opacity: .5;
+}
 
 /* -----------------SOCIAL--------------------*/
 
 .social{
-     background-color: rgb(255, 216, 197);
+     background-color: rgb(248, 255, 237);
 }
 
 .social-banner-gif{
      display: block;
      position: relative;
      top: 0;
-     width: 30%;
+     width: 600px;
      height: 100vh;
      margin-right: 0;
      z-index: 0;
@@ -245,9 +323,13 @@ main{
 }
 
 .social-links,#email form{
-     margin-top: 6vh;
      flex-direction: column;
      width: 100%;
+}
+
+.social-links{
+     margin-top: 6vh;
+     justify-content: space-between;
 }
 
 .social-direct p{
@@ -260,7 +342,7 @@ main{
 #icons,#email{
      position: relative;
      z-index: 30;
-     background-color: rgba(121, 71, 116, 0.671);
+     background-color: rgb(250, 221, 160);
      animation: slideup 1s;
      flex-wrap: wrap;
      justify-content: space-evenly;
@@ -291,7 +373,7 @@ main{
 #gmail{
      margin-top: auto;
      text-align: center;
-     background-color: rgb(255, 216, 197);
+     background-color: rgb(248, 255, 237);
      border-radius: 1.5rem;
      padding: 1rem;
 }
@@ -311,7 +393,7 @@ main{
      width:250px;
      margin: auto;
      padding: 1rem;
-     margin-bottom: 2rem;
+     /* margin-bottom: 2rem; */
      border-radius: 1rem;
      transition: ease .15s;
      border: 2px solid rgb(240, 86, 86);
@@ -377,18 +459,28 @@ form *:focus{
      background-color: rgb(255, 135, 135);
 }
 
-
 .loading-modal{
+     display: flex;
      position: absolute;
      background-color: #29292981;
      border-radius: 1rem;
-     width: 80px;
-     height: 80px;
-     left: calc(50% - 40px);
-     right: auto;
-     /* margin: auto; */
-     padding: 1rem;
      border: none;
+     width: 120px;
+     min-height: 120px;
+     left:calc(50% - 60px);
+}
+
+.loading-modal img{
+     position: relative;
+     margin: auto;
+     width: 80px;
+}
+
+.loading-modal p{
+     position: relative;
+     margin: auto;
+     font-size: 1.1rem;
+     color: rgb(255, 255, 255);
 }
 
 /* -----------------ANIMACIONES--------------------*/
@@ -410,7 +502,7 @@ form *:focus{
 
 @keyframes slidein-reverse{
      0%{
-          right: -10vw;
+          right: -5vw;
           opacity: 0;
      }
      20%{
@@ -438,7 +530,6 @@ form *:focus{
      }
 }
 
-
 @keyframes slideup{
      0%{
           margin-top: 50vh;
@@ -461,4 +552,34 @@ form *:focus{
      to{
           transform: translate(2px)
      }
+}
+
+@keyframes slidedown{
+     0%{
+          margin-top: -5rem;
+          opacity: 0;
+     }
+     20%{
+          opacity: 0;
+     }
+     99%{
+          margin-top: 0;
+          opacity: 1;
+     }
+}
+
+@keyframes colors {
+     0%{    
+          border-color: rgb(2, 0, 90);
+          box-shadow: none;
+     }
+     50%{
+          border-color: rgb(0, 255, 21);
+          box-shadow: 0 0 1rem rgb(0, 255, 21);
+     }
+     100%{
+          border-color: rgb(2, 0, 90);
+          box-shadow: none;
+     }
+
 }

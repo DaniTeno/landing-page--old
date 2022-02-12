@@ -3,6 +3,8 @@ export function lateralBand(){
           $principalBand = document.createElement('aside');
 
      $principalBand.classList.add('principal-band')
+     $principalBand.classList.add('slide-from-left')
+
      
      $principalBand.innerHTML = `
           <a href="#" id="logo">Logo</a>

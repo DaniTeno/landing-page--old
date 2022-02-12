@@ -10,7 +10,7 @@ export function formLogic(){
 
           fetch("https://ormsubmit.co/ajax/564ea8fced75a99de24c55ebd6d78043", {
                method: "POST",
-               body: new FormData(e.target) //el FormData esta recibiendo el formulario entero atravez de el botón submit (que esta asociado al e.target en esta funcion)
+               body: new FormData(e.target)
           })
           .then(res => res.ok ? res.json() : Promise.reject())
           .then(json => {

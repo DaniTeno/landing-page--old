@@ -7,9 +7,9 @@ export function lateralBand(){
 
      if(localStorage.getItem('lang').includes('es')){
           $principalBand.innerHTML = `
-               <a href="#" id="logo">Logo</a>
+               <a href="#" id="logo" ><p class="logo-fx1">Wu</p><p class="logo-fx2">koding</p></a>
                <nav>
-                    <a href="/#">Inicio</a>
+                    <a href="/#" id="home-lateral-btn">Inicio</a>
                     <a href="#about" id="about-lateral-btn">Acerca de mí</a>
                     <a href="/#/projects">Proyectos</a>
                     <a href="/#/social">Redes</a>

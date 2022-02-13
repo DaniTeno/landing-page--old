@@ -1,3 +1,4 @@
+
 *{
      box-sizing: border-box;
      font-size: 1.4rem;
@@ -25,7 +26,6 @@ main{
      margin-left: 8rem;
      min-width: 500px;
      width: 100%;
-     background: #111;
 }
 
 ::-webkit-scrollbar{
@@ -108,7 +108,6 @@ main{
      transition: .2s ease;
      padding: .1rem .2rem;
 }
-
 
 #logo{
      font-size: 2.2rem;

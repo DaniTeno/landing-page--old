@@ -7,7 +7,9 @@ export function disclaimer(){
           disclaimerMsgObjEn = new PopUpMessage('disclaimer', 'Disclaimer: none of the GIFs or images are my own, they are for academic use only.')
      
      if(localStorage.getItem('lang').includes('es')){
-          $disclBtn.insertAdjacentElement('beforebegin', disclaimerMsgObjEs.createHTML(false, false, '3rem', false))
+          (document.documentElement.clientWidth < 420)
+          ? $disclBtn.insertAdjacentElement('beforebegin', disclaimerMsgObjEs.createHTML(false, '3rem', false, false))
+          : $disclBtn.insertAdjacentElement('beforebegin', disclaimerMsgObjEs.createHTML(false, false, '3rem', false))
      }else{
           $disclBtn.insertAdjacentElement('beforebegin', disclaimerMsgObjEn.createHTML(false, false, '3rem', false))
      }

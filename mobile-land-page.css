@@ -1,0 +1,599 @@
+@media screen and (max-width: 420px){
+          *{
+               font-size: 1rem;
+               color: rgb(255, 255, 255);
+               box-sizing: border-box;
+          }
+
+          body{
+               width: 100vw;
+               min-height: 100vh;
+          }
+
+          main{
+               margin: 0;
+               margin-top: 8vh;
+               width: 100vw;
+               min-width: 320px;
+          }
+
+          .mobile-title{
+               position: relative;
+               text-align: right;
+               color: #fff;
+               background-color: rgb(57, 0, 80);
+               width: 100%;
+               padding-right: .4rem;
+               font-size: 2rem;
+               z-index: 30;
+          }
+
+     /* -----------------PRINCIPAL-BAND--------------------*/
+
+
+          .logo-fx1{
+               transition: ease .2s;
+               animation: waving1 4s infinite;
+          }
+          .logo-fx2{
+               transition: ease .2s;
+               animation: waving2 4s infinite;
+          }
+
+          .principal-band{
+               position: fixed;
+               flex-direction: row;
+               height: 8vh;
+               width: 100vw;
+               border: none;
+               padding: .5rem;
+               background: linear-gradient(to bottom, rgb(15, 0, 80), rgb(57, 0, 80));
+          }
+
+          #logo p{
+               font-size: 1.8rem;
+               text-align: center;
+               margin: 0;
+               display: inline;
+          }
+
+          .principal-band nav{
+               flex-direction: row;
+               justify-content: space-around;
+               width: 100%;
+               margin-bottom: 0;
+               border-right: 1px solid rgb(60, 177, 7);
+          }
+          
+          .principal-band nav a{
+               margin: auto 0;
+               margin-bottom: 0;
+               padding: 0 .1rem;
+          }
+
+          #lateral-bottom{
+               flex-direction: column;
+               padding: 0;
+               justify-content: space-between;
+               margin: 0;
+               padding-left: .2rem;
+          }
+
+          #lateral-bottom p{
+               width: 100%;
+               padding: 0;
+               text-align: center;
+          }
+
+          #disclaimer-btn{
+               border: none;
+               border-top: 1px rgb(5, 175, 28) solid;
+               order: 1;
+          }
+
+          #disclaimer-msg{
+               font-size: .8rem;
+               width: 16rem;
+               padding:  .1rem .4rem;
+               border-radius: .2rem;
+          }
+
+          .show{
+               animation: margin-slidein .5s;
+          }
+
+          /* -----------------HOME--------------------*/
+
+          .mobile-head-banner-gif{
+               width:100vw;
+               opacity: .5;
+          }
+
+          .home-screen > p{
+               position: absolute;
+               top: 70vh;
+               background-color: #000000a1;
+               text-align: center;
+               width: 100%;
+          }
+
+          .mobile-tech-used {
+               display: flex;
+               justify-content: space-around;
+               padding: 2rem 0;
+               width: 100%;
+               position: absolute;
+               top: 80vh;
+               font-size: 2rem;
+               z-index: 20;
+               background-color: #0000009f;
+               flex-direction: column;
+               transition: ease .2s;
+          }
+
+          .mobile-tech-used-figures{
+               display: flex;
+               flex-direction: row;
+               justify-content: space-around;
+          }
+
+          .mobile-tech-used figure{
+               max-width: 120px;
+               transition: ease .3s;
+          }  
+
+          .mobile-tech-used figure img{
+               max-height: 100px;
+               background-color: #bbbbbbd2;
+               border-radius: .5rem;
+               transition: ease-in-out .5s;
+          }
+          .mobile-tech-used figure img:hover{
+               animation: .06s shake 4;
+          }
+          
+          #mobile-text{
+               max-width: 90vw;
+               top: 0;
+               position: relative;
+               z-index: 30;
+               left: auto;
+               margin: 2rem auto;
+               transition: ease-in;
+               padding: .2rem;
+               background-color: rgba(59, 0, 52, 0.699);
+               border-radius: .5rem;
+               font-size: 1.1rem;
+               min-width: 60vw;
+          }
+          
+          .mobile-clock{
+               position: absolute;
+               background-color: rgb(34, 12, 53);
+               top: 42vh;
+               left: 42vw;
+               z-index: 30;
+               border-radius: 4px;
+               border: solid rgb(146, 0, 0) 2px;
+               transform: rotate(-.11turn) skew(12deg,2deg);
+               padding: 0 4px;
+               width: max-content;
+               animation: clockLed 4s infinite;
+          }
+          
+          .mobile-clock p{
+               display: inline;
+               color: rgb(59, 224, 26);
+               text-shadow: 0 0 10px rgb(130, 189, 20);
+               font-family: 'VT323';
+               font-size: 1.5rem;
+          }
+          
+          .blink{
+               opacity: 0;
+          }
+          
+          #hi{
+               top: 65vh;
+               left: 3vw;
+               font-family: 'VT323';
+               width: max-content;
+               margin: 0;
+               background-color: rgb(28, 2, 143);
+               font-size: 1.5rem;
+          }
+
+          /* -----------------SOBRE MI--------------------*/
+
+          #about-me{
+               position: absolute;
+               top: 130vh;
+               z-index: 30;
+               width: 100%;
+               padding-bottom: 1.7rem;
+          }
+
+          .about{
+               position: relative;
+               background-color: #601a66;
+               text-align: center;
+               font-family: 'VT323';
+               font-size: 2.3rem;
+               z-index: 30;
+          }
+
+          .mobile-personal-info{
+               display: flex;
+               position: relative;
+               padding: .5rem;
+               z-index: 30;
+               width: 100%;
+          }
+
+          .mobile-personal-info > div{
+               display: flex;
+               flex-direction: column;
+          }
+
+          .mobile-personal-info img{
+               border: 4px solid rgb(78, 0, 0);
+               border-radius: 3px;
+               max-height: 200px;
+          }
+
+          #mobile-basic-info > div{
+               display: flex;
+               justify-content: space-between;
+               z-index: 20;
+               width: 100%;
+          }
+
+          #mobile-resume,#mobile-basic-info > div{
+               background-color: #350028d2;
+               border-radius: 3px;
+               /* padding: .2rem; */
+               margin-bottom: .5rem;
+               border: 2px solid rgba(27, 0, 78, 0.568);
+               position: relative;
+          }
+
+          #mobile-basic-info > div > p{
+               padding: 0 .5rem;
+          }
+
+          #mobile-resume{
+               background-color: #17002cd2;
+               transition: ease .3;
+               position: relative;
+               z-index: 10;
+          }
+
+          #mobile-basic-info p, #mobile-resume p{
+               font-family: 'VT323';
+               font-size: 1rem;
+               padding: 0 .2rem;
+          }
+
+          #mobile-resume p{
+               margin-bottom: .5rem;
+          }
+
+          .slidedown{
+               animation: slidedown 1s;
+          }
+
+          #about-me-backg{
+               width: 100%;
+               position: absolute;
+               top: 10rem;
+               z-index: 5;
+               opacity: .5;
+          }
+
+          /* -----------------SOCIAL--------------------*/
+
+          .mobile-social{
+               background-color: rgb(248, 255, 237);
+               width: 100%;
+               height: 100%;   
+          }
+          
+          .mobile-social-banner{
+               position: absolute;
+               top: 4vh;
+               width: 100%;
+               z-index: 0;
+          }
+          
+          #icons, #email, #email form{
+               display: flex;
+               justify-content: space-evenly;
+          }
+          
+          .mobile-social-links,#email form{
+               flex-direction: column;
+          }
+          
+          .mobile-social-links{
+               height: 100%;
+               position: relative;
+               display: flex;
+               justify-content: space-between;
+          }
+          
+          .social-direct p{
+               text-align: center;
+               font-family: 'VT323';
+               font-size: 1.5rem;
+          }
+          
+          #icons,#email{
+               position: relative;
+               z-index: 30;
+               background-color: rgb(250, 221, 160);
+               animation: slideup 1s;
+               flex-wrap: wrap;
+               justify-content: space-evenly;
+               padding: .6rem;
+               box-shadow: 0 2px 8px rgb(0, 0, 0);
+          }
+          
+          .mobile-social-links figure img{
+               max-width: 4rem;
+               max-height: 4rem;
+               min-width: 60px;
+               min-height: 60px;
+          }
+          
+          .mobile-social-links figure{
+               margin: auto;
+          }
+          
+          .mobile-social-links figure img,#gmail img{
+               padding: 1rem;
+               background-color: rgb(255, 255, 255);
+               z-index: 10;
+               border: solid rgba(255, 113, 113, 0.726) 2px;
+               border-radius: 1.5rem;
+               transition: ease .4s;
+          }
+          
+          #gmail{
+               margin-top: auto;
+               text-align: center;
+               background-color: rgb(248, 255, 237);
+               border-radius: 1.5rem;
+               padding: 1rem;
+               z-index: 20;
+          }
+          
+          #gmail p{
+               font-family: 'VT323';
+               font-size: 1.6rem;
+               color: rgba(34, 34, 34, 0.856);
+          }
+          
+          #email{
+               justify-content: space-evenly;
+               min-height: 55vh;
+          }
+          
+          #email form{
+               z-index: 20;
+               position: relative;
+               width:250px;
+               margin: .2rem auto;
+               padding: 1rem;
+               border-radius: 1rem;
+               transition: ease .15s;
+               border: 2px solid rgb(240, 86, 86);
+               background: linear-gradient(to bottom, rgb(143, 162, 245), rgb(202, 114, 180));
+               box-shadow: 1px 1px 5px #111;
+          }
+          
+          .slidein-from-right{
+               animation: slidein-reverse .7s;
+          }
+          
+          form > *{
+               border-radius: 1rem;
+               font-size: 1rem;
+               text-align: center;
+               font-weight: 100;
+               font-family: 'Century Gothic';
+               letter-spacing: 1px;
+               color: #292929;
+               border: solid 1px rgba(71, 71, 71, 0.829);
+               transition: ease .15s;
+          }
+          
+          form *:focus{
+               background-color: rgba(255, 255, 255, 0.795);
+          }
+          
+          #submit-btn{
+               width: fit-content;
+               margin: auto;
+               padding: .3rem .5rem;
+               margin-top: .5rem;
+               font-weight: 600;
+          }
+          
+          .social figure img:hover, #social-name, #gmail{
+               box-shadow: inset 1px 2px 2px #111;
+          }
+          
+          #social-name{
+               transition: ease .2s;
+               color: rgba(17, 17, 17, 0.829);
+               width: fit-content;
+               border-radius: 1rem;
+               border: solid 1px rgba(255, 255, 255, 0.562);
+               padding: .2rem .5rem;
+               background-color: rgba(255, 255, 255, 0.705);
+          }
+          
+          #Linkedin img:hover{
+               background-color: rgb(92, 149, 255);
+          }
+          #Facebook img:hover{
+               background-color: rgb(23, 96, 231);
+          }
+          #Instagram img:hover{
+               background-color: rgb(255, 205, 140);
+          }
+          #Github img:hover{
+               background-color: rgb(236, 255, 151);
+          }
+          #gmail img:hover{
+               background-color: rgb(255, 135, 135);
+          }
+          
+          .loading-modal{
+               display: flex;
+               position: absolute;
+               background-color: #29292981;
+               border-radius: 1rem;
+               border: none;
+               width: 120px;
+               min-height: 120px;
+               left:calc(50% - 60px);
+          }
+          
+          .loading-modal img{
+               position: relative;
+               margin: auto;
+               width: 80px;
+          }
+          
+          .loading-modal p{
+               position: relative;
+               margin: auto;
+               font-size: 1.1rem;
+               color: rgb(255, 255, 255);
+          }
+
+          /* -----------------ANIMACIONES--------------------*/
+
+     @keyframes margin-slidein{
+          0%{
+               left: -10vw;
+               opacity: 0;
+          }
+          20%{
+               opacity: 0;
+          }
+          99%{
+               left: 0;
+               opacity: 1;
+          }
+     }
+
+     @keyframes slidein-reverse{
+          0%{
+               right: -5vw;
+               opacity: 0;
+          }
+          20%{
+               opacity: 0;
+          }
+          99%{
+               right: 0;
+               opacity: 1;
+          }
+     }
+
+     @keyframes slidein{
+          0%{
+               top: -10vw;
+               opacity: 0;
+          }
+          20%{     
+               opacity: 0;
+          }
+          99%{
+               top: 0;
+               opacity: 1;
+          }
+     }
+
+     @keyframes slideup{
+          0%{
+               margin-top: 50vh;
+               opacity: 0;
+
+          }
+          50%{
+               opacity: 0;
+          }
+          99%{
+               margin-top: 0;
+               opacity: 1;
+          }
+     }
+
+     @keyframes shake{
+          from{
+               transform: translate(-2px)
+          }
+          to{
+               transform: translate(2px)
+          }
+     }
+
+     @keyframes slidedown{
+          0%{
+               margin-top: -5rem;
+               opacity: 0;
+          }
+          20%{
+               opacity: 0;
+          }
+          99%{
+               margin-top: 0;
+               opacity: 1;
+          }
+     }
+
+     @keyframes colors {
+          0%{    
+               border-color: rgb(2, 0, 90);
+               box-shadow: none;
+          }
+          50%{
+               border-color: rgb(0, 255, 21);
+               box-shadow: 0 0 1rem rgb(0, 255, 21);
+          }
+          100%{
+               border-color: rgb(2, 0, 90);
+               box-shadow: none;
+          }
+
+     }
+
+     @keyframes clockLed {
+          0%{    
+               border-color: rgb(2, 0, 90);
+               box-shadow: 0 0 1rem rgba(255, 22, 22, 0);
+          }
+          50%{
+               border-color: rgb(255, 22, 22);
+               box-shadow: 0 0 1rem rgb(255, 22, 22);
+          }
+          100%{
+               border-color: rgb(2, 0, 90);
+               box-shadow: 0 0 1rem rgba(255, 22, 22, 0);
+          }
+     }
+
+     @keyframes waving1 {
+          0%{color: rgb(200, 255, 70)}
+          50%{color: rgb(255, 255, 255)}
+          100%{color: rgb(200, 255, 70)}
+     }
+     @keyframes waving2{
+          0%{text-shadow: 0 0 3px#fff;}
+          50%{text-shadow: none}
+          100%{text-shadow: 0 0 3px #fff}
+     }
+}

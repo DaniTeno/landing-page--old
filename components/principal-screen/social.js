@@ -51,9 +51,7 @@ export function social(){
                                    <input type="text" name="subject" placeholder="Asunto" autocomplete="off">
                                    <textarea name="msg-content" cols="60" rows="6" placeholder="*Deja tu mensaje aquí" required></textarea>
                                    <input type="submit" value="Enviar" id="submit-btn">                       
-                                   <div class="loading-modal nodisplay">
-                                        <img src="../../assets/oval.svg" alt="loading-img" id="loader-svg">
-                                   </div>
+                                   <div class="loading-modal nodisplay"></div>
                               </form>
                          </div>                  
                     </div>
@@ -105,9 +103,7 @@ export function social(){
                                    <input type="text" name="subject" placeholder="Subject" autocomplete="off">
                                    <textarea name="msg-content" cols="60" rows="6" placeholder="*Leave your message here" required></textarea>
                                    <input type="submit" value="Send" id="submit-btn">                       
-                                   <div class="loading-modal nodisplay">
-                                        <img src="../../assets/oval.svg" alt="loading-img" id="loader-svg">
-                                   </div>
+                                   <div class="loading-modal nodisplay"></div>
                               </form>
                          </div>                  
                     </div>

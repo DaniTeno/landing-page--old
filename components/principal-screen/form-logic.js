@@ -1,13 +1,13 @@
 export function formLogic(){
      const d = document,
-          $social = d.querySelector('.social'),
-          $form = $social.querySelector('form'),
-          $modalLoading = $social.querySelector('.loading-modal')
+          $main = d.querySelector('main'),
+          $form = $main.querySelector('form'),
+          $modalLoading = $main.querySelector('.loading-modal')
      
-     $social.addEventListener("submit", e=>{
+          $main.addEventListener("submit", e=>{
           e.preventDefault();
           $modalLoading.classList.remove("nodisplay");
-
+          $modalLoading.innerHTML = '<img src="../../assets/oval.svg" alt="loading-img" id="loader-svg">'
           fetch("https://ormsubmit.co/ajax/564ea8fced75a99de24c55ebd6d78043", {
                method: "POST",
                body: new FormData(e.target)
@@ -16,8 +16,8 @@ export function formLogic(){
           .then(json => {
                console.log(json);
                (localStorage.getItem('lang').includes('es'))
-                    ? $modalLoading.innerHTML = `<p id="sended-msg">Enviado<p>`                   
-                    : $modalLoading.innerHTML = `<p id="sended-msg">Delivered<p>`;                         
+                    ? $modalLoading.innerHTML = `<p id="sended-msg">Enviado</p>`                   
+                    : $modalLoading.innerHTML = `<p id="sended-msg">Delivered</p>`;                         
                
                setTimeout(()=>{
                     $modalLoading.classList.add("nodisplay");
@@ -26,8 +26,8 @@ export function formLogic(){
           .catch(err =>{
                console.log(err);
                (localStorage.getItem('lang').includes('es'))
-                    ? $modalLoading.innerHTML = `<p id="sended-msg">Ocurrió un error :(<p>`
-                    : $modalLoading.innerHTML = `<p id="sended-msg">Something went wrong :(<p>`
+                    ? $modalLoading.innerHTML = `<p id="sended-msg">Ocurrió un error :(</p>`
+                    : $modalLoading.innerHTML = `<p id="sended-msg">Something went wrong :(</p>`
                setTimeout(()=>{
                     $modalLoading.classList.add("nodisplay");
                }, 2000);  

@@ -9,7 +9,6 @@ export function lateralBand(){
           $principalBand.innerHTML = `
                <a href="#" id="logo" ><p class="logo-fx1">Wu</p><p class="logo-fx2">koding</p></a>
                <nav>
-                    <a href="/#" id="home-lateral-btn">Inicio</a>
                     <a href="#about" id="about-lateral-btn">Acerca de mí</a>
                     <a href="/#/projects">Proyectos</a>
                     <a href="/#/social">Redes</a>
@@ -22,9 +21,8 @@ export function lateralBand(){
           `;   
      }else {
           $principalBand.innerHTML = `
-               <a href="#" id="logo">Logo</a>
+               <a href="#" id="logo" ><p class="logo-fx1">Wu</p><p class="logo-fx2">koding</p></a>
                <nav>
-                    <a href="/#">Home</a>
                     <a href="#about" id="about-lateral-btn">About Me</a>
                     <a href="/#/projects">Projects</a>
                     <a href="/#/social">Networks</a>

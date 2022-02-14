@@ -7,9 +7,7 @@ const d = document,
      $main = document.querySelector('main')
 
 // alert('Este sitio aún está en construcción')
-window.addEventListener('resize', e =>{
-     if(document.documentElement.clientWidth < 420) location.reload()
-});
+
 
 if(!localStorage.getItem('lang')) localStorage.setItem('lang', navigator.language)
 d.addEventListener('DOMContentLoaded', e=>{

@@ -36,7 +36,7 @@ export function router(){
                $main.appendChild(home());
                homeLogic(); 
           }
-     } else {
+     } else {       
           if(hash == '#about'){
                $main.appendChild(mobileHome());
                mobileHomeLogic();

@@ -8,10 +8,13 @@ export function disclaimer(){
      
      if(localStorage.getItem('lang').includes('es')){
           (document.documentElement.clientWidth < 420)
-          ? $disclBtn.insertAdjacentElement('beforebegin', disclaimerMsgObjEs.createHTML(false, '3rem', false, false))
+          ? $disclBtn.insertAdjacentElement('beforebegin', disclaimerMsgObjEs.createHTML('5.1rem', '.2rem', false, false))
           : $disclBtn.insertAdjacentElement('beforebegin', disclaimerMsgObjEs.createHTML(false, false, '3rem', false))
      }else{
-          $disclBtn.insertAdjacentElement('beforebegin', disclaimerMsgObjEn.createHTML(false, false, '3rem', false))
+          (document.documentElement.clientWidth < 420)
+          ? $disclBtn.insertAdjacentElement('beforebegin', disclaimerMsgObjEn.createHTML('5.1rem', '.2rem', false, false))
+          : $disclBtn.insertAdjacentElement('beforebegin', disclaimerMsgObjEn.createHTML(false, false, '3rem', false))
+          
      }
      d.addEventListener('mouseover', e=>{
           const $disc = d.querySelector(`#disclaimer-msg`)

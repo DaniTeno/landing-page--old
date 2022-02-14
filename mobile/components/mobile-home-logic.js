@@ -60,13 +60,12 @@ export function mobileHomeLogic(){
                $basicInfoDivs = $about.querySelectorAll('.slidein-from-right')
 
 
-          if(scrollTopPercentage > 10){
+          if(scrollTopPercentage > 6){
                
-               $gifBanner.style.top = `${dElement.scrollHeight*0.14}px`;
+               $gifBanner.style.top = `11.5rem`;
                $gifBanner.style.position = 'absolute';
-               $clock.style.top = `${dElement.scrollHeight*0.291}px`;
+               $clock.style.top = `22.5rem`;
                $clock.style.position = 'absolute';
-
                $techUsedSection.classList.remove('hidden')
                $text.classList.remove('hidden')
                $text.classList.add('show')
@@ -80,7 +79,7 @@ export function mobileHomeLogic(){
                $text.classList.add('show')
           }
 
-          if(scrollTopPercentage < 10) {              
+          if(scrollTopPercentage < 6) {              
                $fig.forEach(figure => {
                     figure.classList.add('hidden');
                     figure.classList.toggle('show');
@@ -90,9 +89,9 @@ export function mobileHomeLogic(){
                $text.classList.add('hidden');
                $text.classList.remove('show');
                $gifBanner.style.position = 'fixed';
-               $gifBanner.style.top = '8vh';
+               $gifBanner.style.top = '5rem';
                $clock.style.position = 'fixed';
-               $clock.style.top = '38vh';
+               $clock.style.top = '16rem';
           }
 
           

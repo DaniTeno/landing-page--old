@@ -28,6 +28,12 @@ main{
      width: 100%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 ::-webkit-scrollbar{
      background: linear-gradient(to bottom, rgb(45, 27, 63),rgb(39, 23, 54));
      width: 12px;
@@ -250,7 +256,6 @@ main{
      top: 88vh;
      z-index: 30;
      font-size: 3rem;
-     animation: 2s slideup;
      background-color: #000000d2;
      text-align: center;
 }
@@ -318,7 +323,7 @@ main{
 .personal-info img{
      border: 4px solid rgb(78, 0, 0);
      border-radius: 3px;
-     max-height: 400px;
+     max-height: 200px;
 }
 
 #basic-info > div{
@@ -349,7 +354,8 @@ main{
 
 #basic-info p, #resume p{
      font-family: 'VT323';
-     font-size: 1.2rem;
+     font-size: 1rem;
+     font-weight: lighter;
 }
 
 #resume p{
@@ -550,6 +556,179 @@ form *:focus{
      color: rgb(255, 255, 255);
 }
 
+/* -----------------PROYECTOS--------------------*/
+
+.main-projects{
+     width: 100%;
+     margin: 0;
+     margin-top: 5rem;
+     background: linear-gradient(to bottom, #eee, #ccc);
+}
+
+.main-projects *{
+     font-family: 'Century Gothic', 'sans serif'
+}
+
+.projects-aside{
+     width: 100%;
+     height: 5rem;
+     flex-direction: row;
+     flex-wrap: wrap;
+     background: linear-gradient(to bottom, rgb(167, 167, 167), #bbb);
+     border-bottom: 2px solid rgb(117, 117, 117);
+}
+
+.projects-aside #logo{
+     margin: auto;
+     height: 2.5rem;
+}
+
+.projects-aside nav{
+     flex-direction: row;
+     justify-content: space-around;
+     width: 100%;
+}
+.projects-aside nav a{
+     font-size: 1rem;
+     font-family: 'Century Gothic';
+     background-color: rgba(0, 0, 0, 0.11);
+     border-top: #00000052 1px solid;
+}
+.projects-aside nav a:hover{
+     background-color: rgb(70, 135, 151);
+}
+
+.projects-title{
+     position: fixed;
+     z-index: 99;
+     padding-bottom: .2rem;
+     text-align: right;
+     padding-right: 1rem;
+     font-size: 1rem;
+     animation: 1.5s margin-slidein;
+     box-shadow: 1px -2px 11px #111;
+     width: 100%;
+     background-color: rgb(127, 139, 248);
+     border-bottom: 2px solid rgba(117, 117, 117, 0.336);
+     font-family: 'Century Gothic';
+}
+
+.projects-aside #lateral-bottom p{ 
+     font-family: 'Century Gothic';
+     transition: ease .2s;
+     font-size: 1rem;
+}
+
+.projects-section{
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+}
+
+.projects-display{
+     display: flex;
+     margin-top: 1.5rem;
+     height: 100%;
+}
+
+.projects-menu{
+     padding: .5rem;
+     width: 20rem;
+     background-color: rgba(255, 255, 255, 0.774);
+     border-right: #29292952 1px solid;
+     overflow-x: hidden; 
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: max-content;
+     gap: .5rem;
+     min-width: 350px;
+     height: 100%;
+}
+
+.project-on-display{
+     display: flex;
+     overflow-x: hidden;
+     width: 100%;
+}
+
+.project-card{
+     background-color: #d4d4d4;
+     border-radius: 5px;
+     transition: ease .2s;
+     border: #aaa solid 1px;
+     padding: .5rem;
+     height: fit-content;
+     text-align: center;
+}
+.project-card:hover{
+     background-color: rgb(152, 177, 177);
+}
+
+.card-title{
+     font-size: 1rem;
+     color: #222;
+     font-weight: 600;
+     padding: .1rem;
+}
+.card-desc{
+     font-size: .7rem;
+     color: #333;
+     font-weight: 100;
+     border: #aaa solid 1px;
+     border-radius: 5px;
+     background-color: rgba(58, 58, 58, 0.151);
+}
+
+#pau-access-form{
+     background-color: #e776af;
+     margin: auto;
+     width: fit-content;
+     padding: 1rem;
+     border-radius: 5px;
+     border: solid 2px rgba(179, 76, 156, 0.808);
+     box-shadow: 1px 2px 5px #111;
+}
+
+#pau-access-form input{
+     font-size: .8rem;
+     padding: .3rem;
+}
+
+#escrito-de-la-carta{
+     padding: .6rem;
+     background-color: rgb(252, 240, 202);
+     border-radius: 4px;
+     box-shadow: 1px 2px 5px #111;
+     width: 90%;
+     margin: auto;
+}
+
+#escrito-de-la-carta p{
+     width:100%;
+     font-size: .8rem;
+     color: rgb(44, 44, 44);
+     margin-bottom: .4rem;
+     text-indent: 1rem;
+}
+
+#firma{
+     text-align: right;
+     font-weight: bold;
+}
+
+.projects-aside #lateral-bottom{
+     position: absolute;
+     right: 0;
+}
+
+.projects-aside #disclaimer-msg{
+     top: -1vh;
+     left: -89vw;
+     width: 360px;
+     height: fit-content;
+     font-size: .7rem;
+     font-family: 'Century Gothic';
+}
 
 /* -----------------ANIMACIONES--------------------*/
 

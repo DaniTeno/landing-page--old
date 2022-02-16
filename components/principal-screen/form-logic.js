@@ -8,7 +8,7 @@ export function formLogic(){
           e.preventDefault();
           $modalLoading.classList.remove("nodisplay");
           $modalLoading.innerHTML = '<img src="../../assets/oval.svg" alt="loading-img" id="loader-svg">'
-          fetch("https://ormsubmit.co/ajax/564ea8fced75a99de24c55ebd6d78043", {
+          fetch("https://formsubmit.co/ajax/564ea8fced75a99de24c55ebd6d78043", {
                method: "POST",
                body: new FormData(e.target)
           })
